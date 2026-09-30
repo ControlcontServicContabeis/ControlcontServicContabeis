@@ -3,89 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controlcont | Escritório de Contabilidade em Marabá</title>
+    <title>Controlcont | Escritório de Contabilidade em Marabá-PA</title>
+    <meta name="description" content="Controlcont Serviços Contábeis LTDA - Escritório de contabilidade em Marabá-PA. Atividades contábeis, consultoria e auditoria.">
     
-    <!-- Bootstrap 5 CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #1a3c6e;
-            --primary-dark: #0f2a4a;
-            --accent: #f0b429;
-            --accent-hover: #d99a1a;
-            --gray-light: #f8f9fc;
-            --gray: #6b7a90;
+            --primary: #0a4d8c;
+            --primary-dark: #06365f;
+            --primary-light: #1a6bb5;
+            --accent: #f5a623;
+            --accent-hover: #e09515;
+            --text-dark: #1a2332;
+            --text-muted: #5a6a7a;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(10, 77, 140, 0.08);
+            --shadow-md: 0 4px 16px rgba(10, 77, 140, 0.10);
+            --shadow-lg: 0 12px 40px rgba(10, 77, 140, 0.12);
+            --radius: 12px;
+            --radius-lg: 20px;
         }
 
         * {
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            color: #2d3748;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        /* Navbar */
+        /* ===== NAVBAR ===== */
         .navbar {
-            background: rgba(26, 60, 110, 0.98) !important;
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-sm);
             padding: 0.8rem 0;
             transition: all 0.3s ease;
         }
 
         .navbar-brand {
             font-weight: 800;
-            font-size: 1.5rem;
-            color: #fff !important;
+            font-size: 1.4rem;
+            color: var(--primary) !important;
             letter-spacing: -0.5px;
         }
 
         .navbar-brand i {
             color: var(--accent);
-            margin-right: 8px;
+            margin-right: 6px;
+            font-size: 1.5rem;
         }
 
         .nav-link {
-            color: rgba(255,255,255,0.85) !important;
             font-weight: 500;
-            font-size: 0.95rem;
+            color: var(--text-dark) !important;
             padding: 0.5rem 1rem !important;
-            transition: color 0.2s;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
         }
 
         .nav-link:hover {
-            color: var(--accent) !important;
+            color: var(--primary) !important;
+            background: rgba(10, 77, 140, 0.06);
         }
 
         .btn-nav-cta {
-            background: var(--accent);
-            color: var(--primary-dark) !important;
-            font-weight: 600;
-            border-radius: 6px;
+            background: var(--primary);
+            color: white !important;
+            border-radius: 10px;
             padding: 0.5rem 1.3rem !important;
-            transition: all 0.25s;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(10, 77, 140, 0.25);
         }
 
         .btn-nav-cta:hover {
-            background: var(--accent-hover);
+            background: var(--primary-dark);
             transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(10, 77, 140, 0.35);
         }
 
-        /* Hero */
+        /* ===== HERO ===== */
         .hero {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #2a5298 100%);
-            padding: 140px 0 100px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 40%, var(--primary-light) 100%);
             position: relative;
             overflow: hidden;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
+            padding: 7rem 0 5rem;
         }
 
         .hero::before {
@@ -93,9 +113,9 @@
             position: absolute;
             top: -50%;
             right: -20%;
-            width: 600px;
-            height: 600px;
-            background: rgba(240, 180, 41, 0.08);
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.12) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -104,101 +124,111 @@
             position: absolute;
             bottom: -30%;
             left: -10%;
-            width: 400px;
-            height: 400px;
-            background: rgba(255,255,255,0.03);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
             border-radius: 50%;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #fff;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
-        .hero p.lead {
-            font-size: 1.15rem;
-            color: rgba(255,255,255,0.8);
-            max-width: 560px;
-            line-height: 1.7;
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(240, 180, 41, 0.15);
-            border: 1px solid rgba(240, 180, 41, 0.3);
-            color: var(--accent);
-            padding: 0.4rem 1rem;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #fff;
+            padding: 0.45rem 1.1rem;
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 1.5rem;
+            backdrop-filter: blur(8px);
         }
 
         .hero-badge i {
-            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            color: white;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            max-width: 540px;
+            margin-bottom: 2rem;
+            font-weight: 400;
         }
 
         .btn-hero-primary {
             background: var(--accent);
-            color: var(--primary-dark);
+            color: var(--text-dark) !important;
             font-weight: 700;
-            padding: 0.85rem 2rem;
-            border-radius: 8px;
+            padding: 0.75rem 2rem;
+            border-radius: 12px;
             border: none;
-            font-size: 1rem;
-            transition: all 0.25s;
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 16px rgba(245, 166, 35, 0.4);
         }
 
         .btn-hero-primary:hover {
             background: var(--accent-hover);
-            color: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(240, 180, 41, 0.35);
+            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.5);
         }
 
         .btn-hero-outline {
             background: transparent;
-            color: #fff;
+            color: white !important;
             font-weight: 600;
-            padding: 0.85rem 2rem;
-            border-radius: 8px;
-            border: 2px solid rgba(255,255,255,0.35);
-            font-size: 1rem;
-            transition: all 0.25s;
+            padding: 0.75rem 2rem;
+            border-radius: 12px;
+            border: 1.5px solid rgba(255, 255, 255, 0.35);
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
         }
 
         .btn-hero-outline:hover {
-            border-color: var(--accent);
-            color: var(--accent);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
         }
 
         .hero-stats {
             display: flex;
             gap: 2.5rem;
             margin-top: 3rem;
-            flex-wrap: wrap;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .hero-stat h3 {
-            color: var(--accent);
+            font-size: 1.8rem;
             font-weight: 800;
-            font-size: 1.6rem;
+            color: white;
             margin-bottom: 0.2rem;
         }
 
         .hero-stat p {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.85rem;
             margin: 0;
+            max-width: none;
         }
 
         .hero-image-wrapper {
@@ -207,110 +237,147 @@
         }
 
         .hero-image-wrapper img {
-            border-radius: 16px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             width: 100%;
-            height: auto;
+            height: 380px;
             object-fit: cover;
         }
 
-        /* Section styles */
+        /* ===== SECTION COMMON ===== */
         .section-padding {
-            padding: 90px 0;
+            padding: 5rem 0;
         }
 
-        .section-title {
-            font-size: 2.1rem;
-            font-weight: 800;
-            color: var(--primary-dark);
-            letter-spacing: -0.5px;
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary);
             margin-bottom: 0.8rem;
         }
 
+        .section-label i {
+            font-size: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
         .section-subtitle {
-            color: var(--gray);
+            color: var(--text-muted);
             font-size: 1.05rem;
-            max-width: 560px;
-            line-height: 1.65;
+            max-width: 620px;
+            margin: 0 auto;
+            font-weight: 400;
         }
 
-        .section-tag {
-            display: inline-block;
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 0.6rem;
-        }
-
-        /* Service cards */
+        /* ===== SERVICES ===== */
         .service-card {
-            background: #fff;
-            border-radius: 14px;
-            padding: 2.2rem 1.8rem;
-            border: 1px solid #eef1f6;
-            transition: all 0.3s ease;
+            background: var(--bg-white);
+            border: 1px solid rgba(10, 77, 140, 0.08);
+            border-radius: var(--radius);
+            padding: 2rem 1.8rem;
             height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         .service-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 45px rgba(26, 60, 110, 0.1);
-            border-color: rgba(240, 180, 41, 0.3);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(10, 77, 140, 0.15);
         }
 
         .service-icon {
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, var(--primary) 0%, #2a5298 100%);
+            background: linear-gradient(135deg, rgba(10, 77, 140, 0.08), rgba(10, 77, 140, 0.04));
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.3rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: all 0.3s ease;
         }
 
-        .service-icon i {
-            color: var(--accent);
-            font-size: 1.4rem;
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
         }
 
         .service-card h5 {
             font-weight: 700;
-            color: var(--primary-dark);
             font-size: 1.1rem;
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-dark);
         }
 
         .service-card p {
-            color: var(--gray);
-            font-size: 0.92rem;
-            line-height: 1.65;
+            color: var(--text-muted);
+            font-size: 0.9rem;
             margin: 0;
+            line-height: 1.65;
         }
 
-        /* About section */
+        /* ===== ABOUT ===== */
         .about-section {
-            background: var(--gray-light);
+            background: var(--bg-light);
         }
 
-        .about-image {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        .about-img-wrapper {
+            position: relative;
         }
 
-        .about-image img {
+        .about-img-wrapper img {
+            border-radius: var(--radius-lg);
             width: 100%;
-            height: 420px;
+            height: 400px;
             object-fit: cover;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            background: var(--accent);
+            color: var(--text-dark);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.4);
+            text-align: center;
+        }
+
+        .about-badge h4 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .about-badge span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .about-list {
             list-style: none;
             padding: 0;
-            margin: 1.5rem 0 0;
         }
 
         .about-list li {
@@ -318,178 +385,313 @@
             align-items: flex-start;
             gap: 12px;
             margin-bottom: 1rem;
+            color: var(--text-muted);
             font-size: 0.95rem;
-            color: #4a5568;
         }
 
         .about-list li i {
-            color: var(--accent);
-            font-size: 1.1rem;
+            color: var(--primary);
+            font-size: 1.2rem;
             margin-top: 2px;
+            flex-shrink: 0;
         }
 
-        /* Info cards */
-        .info-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid #eef1f6;
+        /* ===== COMPANY DATA ===== */
+        .data-card {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(10, 77, 140, 0.06);
             height: 100%;
-            transition: box-shadow 0.25s;
+            transition: all 0.3s ease;
         }
 
-        .info-card:hover {
-            box-shadow: 0 10px 30px rgba(26, 60, 110, 0.08);
+        .data-card:hover {
+            box-shadow: var(--shadow-md);
         }
 
-        .info-card .icon-box {
-            width: 44px;
-            height: 44px;
-            background: rgba(26, 60, 110, 0.07);
+        .data-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(10, 77, 140, 0.06);
+        }
+
+        .data-card-header i {
+            font-size: 1.4rem;
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            background: rgba(10, 77, 140, 0.07);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
         }
 
-        .info-card .icon-box i {
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .info-card h6 {
+        .data-card-header h6 {
             font-weight: 700;
-            color: var(--primary-dark);
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .info-card p {
-            color: var(--gray);
-            font-size: 0.88rem;
             margin: 0;
-            line-height: 1.6;
+            font-size: 1rem;
+            color: var(--text-dark);
         }
 
-        .info-card p a {
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(10, 77, 140, 0.05);
+            font-size: 0.88rem;
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-row .label {
+            color: var(--text-muted);
+            font-weight: 500;
+            flex-shrink: 0;
+            margin-right: 1rem;
+        }
+
+        .data-row .value {
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: right;
+            word-break: break-word;
+        }
+
+        .badge-active {
+            background: #e6f7ee;
+            color: #1a8a4a;
+            padding: 0.25rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .badge-simples {
+            background: #e8f0fe;
             color: var(--primary);
-            text-decoration: none;
+            padding: 0.25rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
         }
 
-        .info-card p a:hover {
-            color: var(--accent);
-        }
-
-        /* CTA band */
-        .cta-band {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 70px 0;
+        /* ===== CONTACT ===== */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             position: relative;
             overflow: hidden;
         }
 
-        .cta-band::before {
+        .contact-section::before {
             content: '';
             position: absolute;
-            top: -60%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: rgba(240, 180, 41, 0.08);
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
 
-        .cta-band h2 {
-            color: #fff;
-            font-weight: 800;
-            font-size: 1.9rem;
+        .contact-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            position: relative;
+            z-index: 2;
+            height: 100%;
         }
 
-        .cta-band p {
-            color: rgba(255,255,255,0.75);
-            font-size: 1.05rem;
-        }
-
-        /* Contact section */
-        .contact-info-item {
-            display: flex;
-            gap: 1rem;
+        .contact-card h3 {
+            color: white;
+            font-weight: 700;
+            font-size: 1.4rem;
             margin-bottom: 1.5rem;
         }
 
-        .contact-info-item .ci-icon {
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
-            background: linear-gradient(135deg, var(--primary) 0%, #2a5298 100%);
-            border-radius: 12px;
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 1.3rem;
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            width: 38px;
+            height: 38px;
+            background: rgba(245, 166, 35, 0.15);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
-        .contact-info-item .ci-icon i {
-            color: var(--accent);
-            font-size: 1.1rem;
+        .contact-item .info {
+            flex: 1;
         }
 
-        .contact-info-item h6 {
-            font-weight: 700;
-            color: var(--primary-dark);
-            font-size: 0.92rem;
+        .contact-item .info strong {
+            display: block;
+            color: white;
+            font-size: 0.9rem;
             margin-bottom: 0.2rem;
         }
 
-        .contact-info-item p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .contact-info-item p a {
-            color: var(--primary);
+        .contact-item .info span,
+        .contact-item .info a {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.88rem;
             text-decoration: none;
-            font-weight: 500;
+            transition: color 0.2s;
+            word-break: break-word;
         }
 
-        .contact-info-item p a:hover {
+        .contact-item .info a:hover {
             color: var(--accent);
         }
 
-        /* Map */
-        .map-container {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.1);
-            height: 380px;
-            background: #e9ecef;
+        .btn-whatsapp {
+            background: #25d366;
+            color: white !important;
+            font-weight: 700;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
+            border: none;
+            transition: all 0.25s ease;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
         }
 
-        .map-container iframe {
+        .btn-whatsapp:hover {
+            background: #1ebe5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ===== MAP ===== */
+        .map-section {
+            background: var(--bg-light);
+        }
+
+        .map-wrapper {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid white;
+            height: 400px;
+        }
+
+        .map-wrapper iframe {
             width: 100%;
             height: 100%;
-            border: 0;
+            border: none;
         }
 
-        /* Footer */
+        .map-info-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            margin-top: -3rem;
+            position: relative;
+            z-index: 5;
+            border-left: 4px solid var(--accent);
+        }
+
+        /* ===== CNAE ===== */
+        .cnae-item {
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            padding: 1.5rem 1.8rem;
+            border-left: 4px solid var(--primary);
+            transition: all 0.25s ease;
+            height: 100%;
+        }
+
+        .cnae-item:hover {
+            background: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cnae-code {
+            display: inline-block;
+            background: rgba(10, 77, 140, 0.08);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.82rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 6px;
+            margin-bottom: 0.6rem;
+        }
+
+        .cnae-item h6 {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .cnae-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .cnae-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+
+        .cnae-tag.principal {
+            background: #fff3e0;
+            color: #b36b00;
+        }
+
+        .cnae-tag.secundaria {
+            background: #e8f0fe;
+            color: var(--primary);
+        }
+
+        /* ===== FOOTER ===== */
         footer {
-            background: var(--primary-dark);
-            color: rgba(255,255,255,0.6);
-            padding: 50px 0 25px;
-            font-size: 0.9rem;
+            background: var(--text-dark);
+            color: rgba(255, 255, 255, 0.65);
+            padding: 3rem 0 1.5rem;
+            font-size: 0.88rem;
         }
 
         footer h6 {
-            color: #fff;
+            color: white;
             font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
 
         footer a {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
             transition: color 0.2s;
         }
@@ -498,518 +700,631 @@
             color: var(--accent);
         }
 
-        footer ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer ul li {
-            margin-bottom: 0.6rem;
-        }
-
-        .footer-brand {
-            font-weight: 800;
-            font-size: 1.3rem;
-            color: #fff;
-        }
-
-        .footer-brand i {
-            color: var(--accent);
-            margin-right: 6px;
-        }
-
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 25px;
-            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
             font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
         }
 
-        /* Responsive */
-        @media (max-width: 991px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991.98px) {
             .hero {
-                padding: 110px 0 70px;
+                padding: 5.5rem 0 3.5rem;
             }
-            .section-padding {
-                padding: 60px 0;
-            }
+
             .hero-image-wrapper {
                 margin-top: 2.5rem;
             }
+
+            .hero-image-wrapper img {
+                height: 280px;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .hero-stat h3 {
+                font-size: 1.4rem;
+            }
+
+            .about-badge {
+                right: 10px;
+                bottom: -15px;
+            }
+
+            .section-padding {
+                padding: 3.5rem 0;
+            }
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 575.98px) {
             .hero h1 {
                 font-size: 1.8rem;
             }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
             .hero-stats {
-                gap: 1.5rem;
+                gap: 1rem;
             }
-            .section-title {
-                font-size: 1.6rem;
+
+            .hero-stat h3 {
+                font-size: 1.2rem;
             }
-            .cta-band h2 {
-                font-size: 1.5rem;
+
+            .hero-stat p {
+                font-size: 0.75rem;
             }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            .map-wrapper {
+                height: 280px;
+            }
+
+            .map-info-card {
+                margin-top: 1rem;
+            }
+
+            .data-card {
+                padding: 1.3rem;
+            }
+
+            .data-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.2rem;
+            }
+
+            .data-row .value {
+                text-align: left;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 0.6s ease forwards;
         }
     </style>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <i class="fas fa-calculator"></i>Controlcont
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link btn-nav-cta" href="https://wa.me/5594984026490" target="_blank">
-                        <i class="fab fa-whatsapp me-1"></i> Fale Conosco
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="inicio">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="hero-badge">
-                    <i class="fas fa-check-circle"></i>
-                    CRC PA001483O · Desde 2020
-                </div>
-                <h1>Contabilidade <span>estratégica</span> para o seu negócio crescer</h1>
-                <p class="lead mt-3">
-                    A Controlcont é especializada em serviços contábeis, consultoria e auditoria 
-                    para empresas de Marabá e região. Cuidamos da sua contabilidade com precisão 
-                    e transparência para você focar no que importa.
-                </p>
-                <div class="mt-4 d-flex flex-wrap gap-3">
-                    <a href="https://wa.me/5594984026490" target="_blank" class="btn btn-hero-primary">
-                        <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
-                    </a>
-                    <a href="#servicos" class="btn btn-hero-outline">
-                        Nossos Serviços <i class="fas fa-arrow-right ms-1"></i>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <h3>+5</h3>
-                        <p>Anos de Experiência</p>
-                    </div>
-                    <div class="hero-stat">
-                        <h3>100%</h3>
-                        <p>Compromisso</p>
-                    </div>
-                    <div class="hero-stat">
-                        <h3>Ativa</h3>
-                        <p>Situação Cadastral</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="hero-image-wrapper">
-                    <!-- SUBSTITUA a URL abaixo por uma imagem do Google de contabilidade que você baixar -->
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" 
-                         alt="Escritório de Contabilidade Controlcont">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SERVICOS ===== -->
-<section class="section-padding" id="servicos">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="section-tag">O que fazemos</span>
-            <h2 class="section-title">Nossos Serviços</h2>
-            <p class="section-subtitle mx-auto">
-                Atividades de contabilidade e consultoria contábil e tributária realizadas 
-                por profissionais qualificados e comprometidos com a sua empresa.
-            </p>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h5>Atividades de Contabilidade</h5>
-                    <p>
-                        Escrituração contábil completa, elaboração de demonstrações financeiras, 
-                        apuração de resultados e atendimento às exigências legais do seu negócio.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h5>Consultoria Contábil</h5>
-                    <p>
-                        Orientação estratégica para tomada de decisões, análise de balanços, 
-                        planejamento financeiro e otimização de resultados.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h5>Auditoria Tributária</h5>
-                    <p>
-                        Revisão de procedimentos fiscais, adequação à legislação tributária, 
-                        identificação de riscos e oportunidades de economia legal.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h5>Departamento Pessoal</h5>
-                    <p>
-                        Gestão completa da folha de pagamento, admissões, rescisões, 
-                        férias, eSocial e cumprimento das obrigações trabalhistas.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h5>Planejamento Tributário</h5>
-                    <p>
-                        Análise do melhor regime tributário (Simples Nacional, Lucro Presumido 
-                        ou Lucro Real) para reduzir legalmente a carga de impostos.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h5>Legalização de Empresas</h5>
-                    <p>
-                        Abertura, alteração e encerramento de empresas, obtenção de CNPJ, 
-                        alvarás e regularização junto aos órgãos competentes.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SOBRE ===== -->
-<section class="section-padding about-section" id="sobre">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-                <div class="about-image">
-                    <!-- SUBSTITUA por imagem do Google de escritório de contabilidade -->
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" 
-                         alt="Sobre a Controlcont">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <span class="section-tag">Sobre a Empresa</span>
-                <h2 class="section-title">Compromisso com a sua tranquilidade</h2>
-                <p style="color: var(--gray); line-height: 1.75;">
-                    A <strong>Controlcont Escritório de Contabilidade</strong>, com CNPJ 
-                    39.807.861/0001-11, foi fundada em 17/11/2020 e está localizada em 
-                    Marabá, Pará. Sob a razão social Controlcont Serviços Contábeis LTDA, 
-                    somos uma Micro Empresa optante pelo Simples Nacional, dedicada a 
-                    oferecer serviços contábeis com excelência e proximidade.
-                </p>
-                <ul class="about-list">
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span><strong>Registro profissional:</strong> CRC PA001483O</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span><strong>Atividade principal:</strong> 69.20-6-01 — Atividades de contabilidade</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span><strong>Responsável:</strong> Ruth da Silva Macedo Sampaio — Sócio-Administrador</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span><strong>Capital Social:</strong> R$ 12.000,00</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <span><strong>Situação Cadastral:</strong> Ativa</span>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-calculator-fill"></i> Controlcont
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dados">Dados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link btn-nav-cta" href="#contato">
+                            <i class="bi bi-telephone-fill me-1"></i> Contato
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- ===== INFORMACOES ===== -->
-<section class="section-padding">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="section-tag">Dados Oficiais</span>
-            <h2 class="section-title">Informações da Empresa</h2>
-            <p class="section-subtitle mx-auto">
-                Transparência e conformidade com todos os órgãos reguladores.
-            </p>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-id-card"></i></div>
-                    <h6>CNPJ</h6>
-                    <p>39.807.861/0001-11</p>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <div class="hero-badge">
+                        <i class="bi bi-patch-check-fill"></i>
+                        CRC-PA 001483/O · Desde 2020
+                    </div>
+                    <h1>
+                        Contabilidade<br>
+                        <span>estratégica</span> para o seu negócio
+                    </h1>
+                    <p>
+                        Escritório de contabilidade em Marabá-PA. Assessoria contábil, 
+                        consultoria e auditoria com atendimento personalizado e foco 
+                        no crescimento da sua empresa.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contato" class="btn btn-hero-primary">
+                            <i class="bi bi-chat-dots-fill me-2"></i>Fale Conosco
+                        </a>
+                        <a href="#servicos" class="btn btn-hero-outline">
+                            <i class="bi bi-grid-fill me-2"></i>Nossos Serviços
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <h3>5+</h3>
+                            <p>Anos de experiência</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>100%</h3>
+                            <p>Situação Ativa</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>PA</h3>
+                            <p>Marabá & Região</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-certificate"></i></div>
-                    <h6>CRC</h6>
-                    <p>PA001483O</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-calendar"></i></div>
-                    <h6>Data de Abertura</h6>
-                    <p>17/11/2020</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
-                    <h6>Porte</h6>
-                    <p>Micro Empresa</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-file-contract"></i></div>
-                    <h6>Natureza Jurídica</h6>
-                    <p>Sociedade Empresária Limitada</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-percentage"></i></div>
-                    <h6>Simples Nacional</h6>
-                    <p>Sim — desde 01/01/2026</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-money-bill-wave"></i></div>
-                    <h6>Capital Social</h6>
-                    <p>R$ 12.000,00</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-check-double"></i></div>
-                    <h6>Situação</h6>
-                    <p>Ativa</p>
+                <div class="col-lg-6 hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" 
+                         alt="Escritório de contabilidade profissional">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ===== CTA BAND ===== -->
-<section class="cta-band">
-    <div class="container position-relative" style="z-index: 2;">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h2>Precisa de um contador de confiança em Marabá?</h2>
-                <p class="mb-0 mt-2">
-                    Entre em contato agora e descubra como podemos ajudar a sua empresa a crescer com segurança.
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="section-padding" id="servicos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label">
+                    <i class="bi bi-gear-fill"></i> O que fazemos
+                </div>
+                <h2 class="section-title">Serviços contábeis completos</h2>
+                <p class="section-subtitle">
+                    Atividades de contabilidade, consultoria e auditoria para 
+                    empresas de todos os portes.
                 </p>
             </div>
-            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                <a href="https://wa.me/5594984026490" target="_blank" class="btn btn-hero-primary">
-                    <i class="fab fa-whatsapp me-2"></i>Chamar no WhatsApp
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== CONTATO + MAPA ===== -->
-<section class="section-padding" id="contato">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-5">
-                <span class="section-tag">Fale Conosco</span>
-                <h2 class="section-title">Entre em Contato</h2>
-                <p class="section-subtitle mb-4">
-                    Estamos prontos para atender você. Envie uma mensagem, ligue ou 
-                    visite nosso escritório.
-                </p>
-
-                <div class="contact-info-item">
-                    <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div>
-                        <h6>Endereço</h6>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-journal-text"></i>
+                        </div>
+                        <h5>Contabilidade Geral</h5>
                         <p>
-                            Rua Afro Sampaio, 252<br>
-                            Quadra 23, Lote 5A — Cidade Nova<br>
-                            Marabá — PA, CEP 68501-560
+                            Escrituração contábil completa, balanços, 
+                            demonstrações e relatórios gerenciais.
                         </p>
                     </div>
                 </div>
-
-                <div class="contact-info-item">
-                    <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
-                    <div>
-                        <h6>Telefone / WhatsApp</h6>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5>Auditoria Contábil</h5>
                         <p>
+                            Análise e verificação de registros contábeis 
+                            e conformidade fiscal.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h5>Consultoria Tributária</h5>
+                        <p>
+                            Planejamento fiscal e tributário para 
+                            otimizar resultados da empresa.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h5>Assessoria Empresarial</h5>
+                        <p>
+                            Suporte na gestão financeira e contábil, 
+                            abertura e regularização de empresas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="section-padding about-section" id="sobre">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
+                             alt="Equipe de contabilidade trabalhando">
+                        <div class="about-badge">
+                            <h4>2020</h4>
+                            <span>Fundação</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-label">
+                        <i class="bi bi-building"></i> Quem somos
+                    </div>
+                    <h2 class="section-title">Controlcont Escritório de Contabilidade</h2>
+                    <p class="text-muted mb-4">
+                        A Controlcont Serviços Contábeis LTDA é uma empresa 
+                        sediada em Marabá-PA, fundada em 17 de novembro de 2020. 
+                        Atuamos com dedicação e profissionalismo, oferecendo 
+                        serviços contábeis de excelência para empresas da região.
+                    </p>
+                    <ul class="about-list">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Empresa ativa e regularizada desde a fundação</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Registro no CRC-PA sob o nº 001483/O</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Optante pelo Simples Nacional</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Sócio-administradora: Ruth da Silva Macedo Sampaio</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DADOS DA EMPRESA ===== -->
+    <section class="section-padding" id="dados">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label">
+                    <i class="bi bi-file-earmark-text-fill"></i> Informações
+                </div>
+                <h2 class="section-title">Dados cadastrais</h2>
+                <p class="section-subtitle">
+                    Informações registradas na Receita Federal e Junta Comercial.
+                </p>
+            </div>
+
+            <!-- CNAE -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="cnae-item">
+                        <span class="cnae-code">69.20-6-01</span>
+                        <h6>Atividades de contabilidade</h6>
+                        <p>Atividade principal registrada</p>
+                        <span class="cnae-tag principal">Principal</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cnae-item">
+                        <span class="cnae-code">69.20-6-02</span>
+                        <h6>Consultoria e auditoria contábil e tributária</h6>
+                        <p>Atividade secundária registrada</p>
+                        <span class="cnae-tag secundaria">Secundária</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Registro -->
+                <div class="col-lg-6">
+                    <div class="data-card">
+                        <div class="data-card-header">
+                            <i class="bi bi-file-earmark-check"></i>
+                            <h6>Informações de Registro</h6>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">CNPJ</span>
+                            <span class="value">39.807.861/0001-11</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Razão Social</span>
+                            <span class="value">Controlcont Serviços Contábeis LTDA</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Nome Fantasia</span>
+                            <span class="value">Controlcont Escritório de Contabilidade</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">CRC</span>
+                            <span class="value">PA001483/O</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Data de Abertura</span>
+                            <span class="value">17/11/2020</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Porte</span>
+                            <span class="value">Micro Empresa</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Natureza Jurídica</span>
+                            <span class="value">Sociedade Empresária Limitada</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Capital Social</span>
+                            <span class="value">R$ 12.000,00</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Tipo</span>
+                            <span class="value">Matriz</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Situação</span>
+                            <span class="value"><span class="badge-active">Ativa</span></span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Opção Simples</span>
+                            <span class="value"><span class="badge-simples">Sim</span></span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Opção MEI</span>
+                            <span class="value">Não</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sócios e Endereço -->
+                <div class="col-lg-6">
+                    <div class="data-card mb-4">
+                        <div class="data-card-header">
+                            <i class="bi bi-person-badge"></i>
+                            <h6>Quadro de Sócios e Administradores</h6>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Sócio-Administrador</span>
+                            <span class="value">Ruth da Silva Macedo Sampaio</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Qualificação</span>
+                            <span class="value">Sócio-Administrador</span>
+                        </div>
+                    </div>
+
+                    <div class="data-card">
+                        <div class="data-card-header">
+                            <i class="bi bi-geo-alt"></i>
+                            <h6>Localização</h6>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Logradouro</span>
+                            <span class="value">Rua Afro Sampaio, 252</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Complemento</span>
+                            <span class="value">Quadra 23, Lote 5A</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Bairro</span>
+                            <span class="value">Cidade Nova</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">CEP</span>
+                            <span class="value">68501-560</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Município</span>
+                            <span class="value">Marabá</span>
+                        </div>
+                        <div class="data-row">
+                            <span class="label">Estado</span>
+                            <span class="value">Pará - PA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCALIZAÇÃO ===== -->
+    <section class="section-padding map-section" id="localizacao">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="section-label">
+                    <i class="bi bi-pin-map-fill"></i> Onde estamos
+                </div>
+                <h2 class="section-title">Nossa localização</h2>
+                <p class="section-subtitle">
+                    Venha nos visitar ou entre em contato. Estamos no bairro 
+                    Cidade Nova, em Marabá-PA.
+                </p>
+            </div>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.5!2d-49.1252964!3d-5.3733019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVMKwMjInMjMuOSJTIDQ5wrAwNycyMS4xIlc!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Localização Controlcont Escritório de Contabilidade">
+                </iframe>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="map-info-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="bi bi-geo-alt-fill fs-3" style="color: var(--primary);"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Controlcont Escritório de Contabilidade</h6>
+                                <p class="mb-0 text-muted small">
+                                    Rua Afro Sampaio, 252 — Quadra 23, Lote 5A<br>
+                                    Cidade Nova, Marabá — PA<br>
+                                    CEP 68501-560
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="section-padding contact-section" id="contato">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-label" style="color: var(--accent);">
+                        <i class="bi bi-headset"></i> Fale conosco
+                    </div>
+                    <h2 class="section-title text-white">Entre em contato</h2>
+                    <p class="mb-4" style="color: rgba(255,255,255,0.75);">
+                        Estamos prontos para atender sua empresa. 
+                        Solicite uma proposta ou tire suas dúvidas.
+                    </p>
+                    <a href="https://wa.me/5594984026490?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Controlcont." 
+                       target="_blank" 
+                       class="btn btn-whatsapp">
+                        <i class="bi bi-whatsapp"></i>
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-card">
+                        <h3><i class="bi bi-info-circle me-2"></i>Informações de contato</h3>
+                        
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div class="info">
+                                <strong>E-mail</strong>
+                                <a href="mailto:mobliopiag@gmail.com">mobliopiag@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div class="info">
+                                <strong>Telefone / WhatsApp</strong>
+                                <a href="tel:+5594984026490">(94) 98402-6490</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div class="info">
+                                <strong>Endereço</strong>
+                                <span>
+                                    Rua Afro Sampaio, 252 — Quadra 23, Lote 5A<br>
+                                    Cidade Nova, Marabá-PA, CEP 68501-560
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-0">
+                            <i class="bi bi-clock-fill"></i>
+                            <div class="info">
+                                <strong>Horário de atendimento</strong>
+                                <span>Segunda a sexta, das 8h às 18h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h6><i class="bi bi-calculator-fill me-1" style="color: var(--accent);"></i> Controlcont</h6>
+                    <p style="font-size: 0.85rem;">
+                        Controlcont Serviços Contábeis LTDA<br>
+                        Escritório de Contabilidade em Marabá-PA.<br>
+                        CRC-PA 001483/O
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h6>Links rápidos</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#inicio">Início</a></li>
+                        <li class="mb-2"><a href="#servicos">Serviços</a></li>
+                        <li class="mb-2"><a href="#sobre">Sobre nós</a></li>
+                        <li class="mb-2"><a href="#localizacao">Localização</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6>Contato</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:mobliopiag@gmail.com">mobliopiag@gmail.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
                             <a href="tel:+5594984026490">(94) 98402-6490</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="contact-info-item">
-                    <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-                    <div>
-                        <h6>E-mail</h6>
-                        <p>
-                            <a href="mailto:controlcont@hotmail.com">controlcont@hotmail.com</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="contact-info-item">
-                    <div class="ci-icon"><i class="fas fa-clock"></i></div>
-                    <div>
-                        <h6>Horário de Atendimento</h6>
-                        <p>Segunda a Sexta — 08h às 18h</p>
-                    </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt me-2"></i>
+                            Marabá-PA
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="col-lg-7">
-                <div class="map-container">
-                    <!-- MAPA DA LOCALIZAÇÃO DA EMPRESA (Google Maps Embed) -->
-                    <!-- Coordenadas da Rua Afro Sampaio, Marabá: -5.3733019, -49.1252964 -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5!2d-49.1252964!3d-5.3733019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua%20Afro%20Sampaio%2C%20252%20-%20Cidade%20Nova%2C%20Marab%C3%A1%20-%20PA%2C%2068501-560!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Localização Controlcont">
-                    </iframe>
-                </div>
-                <p class="mt-3 mb-0" style="font-size: 0.85rem; color: var(--gray);">
-                    <i class="fas fa-info-circle me-1"></i>
-                    Rua Afro Sampaio, 252 — Cidade Nova, Marabá/PA
-                </p>
+            <div class="footer-bottom text-center">
+                &copy; 2026 Controlcont Serviços Contábeis LTDA — CNPJ 39.807.861/0001-11. Todos os direitos reservados.
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="footer-brand mb-3">
-                    <i class="fas fa-calculator"></i>Controlcont
-                </div>
-                <p style="line-height: 1.7;">
-                    Escritório de contabilidade especializado em serviços contábeis, 
-                    consultoria e auditoria empresarial em Marabá, Pará.
-                </p>
-                <p style="font-size: 0.82rem;">
-                    <strong>CRC:</strong> PA001483O<br>
-                    <strong>CNPJ:</strong> 39.807.861/0001-11
-                </p>
-            </div>
-            <div class="col-lg-2 col-md-6">
-                <h6>Links Rápidos</h6>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h6>Serviços</h6>
-                <ul>
-                    <li><a href="#servicos">Contabilidade Geral</a></li>
-                    <li><a href="#servicos">Consultoria Tributária</a></li>
-                    <li><a href="#servicos">Departamento Pessoal</a></li>
-                    <li><a href="#servicos">Planejamento Tributário</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h6>Contato</h6>
-                <ul>
-                    <li>
-                        <i class="fas fa-map-marker-alt me-2" style="color: var(--accent);"></i>
-                        Rua Afro Sampaio, 252 — Cidade Nova
-                    </li>
-                    <li>
-                        <i class="fas fa-phone me-2" style="color: var(--accent);"></i>
-                        <a href="tel:+5594984026490">(94) 98402-6490</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope me-2" style="color: var(--accent);"></i>
-                        <a href="mailto:controlcont@hotmail.com">controlcont@hotmail.com</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p class="mb-0">
-                &copy; 2026 Controlcont Serviços Contábeis LTDA. Todos os direitos reservados.
-            </p>
-        </div>
-    </div>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Smooth scroll -->
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 20px rgba(10, 77, 140, 0.12)';
+            } else {
+                nav.style.boxShadow = '0 1px 3px rgba(10, 77, 140, 0.08)';
             }
         });
-    });
-</script>
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu
+                    const navCollapse = document.getElementById('navMenu');
+                    if (navCollapse.classList.contains('show')) {
+                        new bootstrap.Collapse(navCollapse).hide();
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
